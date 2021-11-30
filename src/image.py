@@ -123,8 +123,7 @@ class Image:
             for j in range (im_bin.W):
                 if self.pixels[i][j] == image.pixels[i][j]:
                     nb_sim += 1
-                else:
-                    nb_pixels += 1
-        resultat = nb_sim / nb_pixels
+            nb_pixels += 1
+            resultat = nb_sim / nb_pixels
         return resultat
 
