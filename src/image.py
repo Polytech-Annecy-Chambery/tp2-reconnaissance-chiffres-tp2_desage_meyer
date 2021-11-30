@@ -69,8 +69,8 @@ class Image:
     #   self : l'image binaire que l'on veut recadrer
     #   on retourne une nouvelle image recadree
     #==============================================================================
-    def localisation(self,S):
-        im_bin = self.binarisation(S)
+    def localisation(self):
+        im_bin = self.binarisation(100)
         l_min = im_bin.H
         c_min = im_bin.W
         l_max = c_max = 0
@@ -112,8 +112,8 @@ class Image:
     #==============================================================================
     # Methode de mesure de similitude entre l'image self et un modele im
     #==============================================================================
-    def similitude(self,image,S):
-        im_bin = self.binarisation(S)
+    def similitude(self,image):
+        im_bin = self.binarisation(100)
         nb_sim = 0
         nb_pixels = 0
         resultat = 0

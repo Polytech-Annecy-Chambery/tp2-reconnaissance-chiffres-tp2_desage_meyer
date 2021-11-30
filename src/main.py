@@ -38,7 +38,7 @@ if __name__ == '__main__':
     #==============================================================================
     # Localisation de l'image et affichage
     #==============================================================================
-    image_localisee = image_binarisee.localisation(S)
+    image_localisee = image_binarisee.localisation()
     image_localisee.display("Image localisee")
 
     # #==============================================================================
@@ -51,5 +51,5 @@ if __name__ == '__main__':
     # # Lecture modeles et reconnaissance
     # #==============================================================================
     liste_modeles = lecture_modeles(path_to_assets)
-    chiffre = reconnaissance_chiffre(image, liste_modeles, S)
+    chiffre = reconnaissance_chiffre(image, liste_modeles, 100)
     print("Le chiffre reconnu est : ", chiffre)
